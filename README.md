@@ -13,3 +13,9 @@ $now = new DateTime();
 $fromFormat = DateTime::fromFormat('U', (string) time());
 ```
 
+Already have an instance of `\DateTime`? This package uses `nesbot/carbon` under the hood, so all of its
+convenience methods are available to you, including `instance`:
+```php
+
+DateTime::instance(new \DateTime) instanceof 'DateTimeInterface' === true
+```

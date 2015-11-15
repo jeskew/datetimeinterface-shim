@@ -26,6 +26,7 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
             array($dateTime->setTime(12, 15)),
             array($dateTime->setTimestamp(time() - 300)),
             array($dateTime->setTimezone(new \DateTimeZone('America/Los_Angeles'))),
+            array(DateTime::instance(new \DateTime)),
         );
     }
 }
